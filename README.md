@@ -78,8 +78,8 @@ Once those lines appear, the Extended Kalman Filters (EKF) are fully initialized
 
 The Python AI Vision Controller (Bottom-Right pane) includes an interactive command-line prompt. Once the EKF is initialized, you can manually maneuver the drone by typing the following commands directly into the terminal:
 
-* `takeoff` : Arms the motors and ascends to the default altitude (10 meters).
-* `go <latitude> <longitude> <altitude>` : Commands the drone to fly to the specified absolute global coordinates.
+* `takeoff` : Arms the motors and ascends to the default altitude (15 meters).
+* `go <latitude> <longitude> <raidus>` : Commands the drone to fly to the specified absolute global coordinates once it reaches the destination starts hovering the area covered by given radius with the coordinates as center of the circle.
 * `stop` : Instantly halts the drone's current trajectory and forces it into a stable hover.
 * `speed <value>` : Adjusts the drone's horizontal flight speed (in meters per second).
 * `rtl` : Triggers the Return-To-Launch failsafe, bringing the drone back to its original spawn coordinates and landing.
@@ -123,7 +123,7 @@ Pass a JSON payload with the target coordinates.
 ```bash
 curl -X POST http://127.0.0.1:5000/api/go \
      -H "Content-Type: application/json" \
-     -d '{"lat": 33.643500, "lon": 72.992300, "alt": 15.0}'
+     -d '{"lat": 33.643500, "lon": 72.992300, "radius": 15.0}'
 
 ```
 
