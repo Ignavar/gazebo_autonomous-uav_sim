@@ -1,0 +1,6 @@
+source;share/disaster_response_ai/hook/pythonpath.ps1
+source;share/disaster_response_ai/hook/pythonpath.dsv
+source;share/disaster_response_ai/hook/pythonpath.sh
+source;share/disaster_response_ai/hook/ament_prefix_path.ps1
+source;share/disaster_response_ai/hook/ament_prefix_path.dsv
+source;share/disaster_response_ai/hook/ament_prefix_path.sh

@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="nust">
+      <static>true</static>
+      <pose>-169.63 96.39 -32.21 0 0 0</pose>
+
+      <link name="ground">
+        <collision name="collision">
+          <geometry>
+            <heightmap>
+              <uri>model://nust/textures/nust_height_map.tif</uri>
+              <size>2548.29 2536.1 71.2</size>
+              <pos>-169.63 96.39  -32.21</pos>
+            </heightmap>
+          </geometry>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <heightmap>
+              <use_terrain_paging>false</use_terrain_paging>
+              <texture>
+                <diffuse>model://nust/textures/nust_aerial.png</diffuse>
+                <normal>model://nust/textures/nust_aerial.png</normal>
+                <size>2548.29 2536.1 71.2</size>
+              </texture>
+              <uri>model://nust/textures/nust_height_map.tif</uri>
+              <size>2548.29 2536.1 71.2</size>
+              <pos>-169.63 96.39 -32.21</pos>
+              <sampling>2</sampling>
+
+            </heightmap>
+          </geometry>
+        </visual>
+      </link>
+
+
+        <!-- ===================== -->
+        <!-- Buildings -->
+        <!-- ===================== -->
+        <link name="buildings">
+          <!-- Relative to model pose -->
+          <pose>0 0 32.21 0 0 0</pose>
+          <!-- Visual -->
+          <visual name="buildings_visual">
+            <geometry>
+              <mesh>
+                <uri>model://nust/textures/buildings.dae</uri>
+                <scale>1 1 1</scale>
+              </mesh>
+            </geometry>
+            <material>
+              <!-- Light grey -->
+              <ambient>0.75 0.75 0.75 1</ambient>
+              <diffuse>0.85 0.85 0.85 1</diffuse>
+              <specular>0.05 0.05 0.05 1</specular>
+              <emissive>0 0 0 1</emissive>
+            </material>
+          </visual>
+          <!-- Collision -->
+          <collision name="buildings_collision">
+            <geometry>
+              <mesh>
+                <uri>model://nust/textures/buildings.dae</uri>
+                <scale>1 1 1</scale>
+              </mesh>
+            </geometry>
+          </collision>
+        </link>
+        
+
+    </model>
+</sdf>

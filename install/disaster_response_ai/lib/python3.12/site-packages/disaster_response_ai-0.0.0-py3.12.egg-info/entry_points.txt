@@ -1,0 +1,2 @@
+[console_scripts]
+vision_controller = disaster_response_ai.vision_controller:main
